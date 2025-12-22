@@ -1,0 +1,275 @@
+.mx-intro-sec {
+	background-color: #F6F7F9;
+	.mx-sec-title {
+		margin: 0 auto;
+		max-width: 765px;
+	}
+}
+
+.mx-intro-content {
+	gap: 24px;
+	display: flex;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+}
+
+.mx-intro-item1 {
+	max-width: 396px;
+	overflow: hidden;
+	position: relative;
+	border-radius: 20px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		width: 100%;
+		height: 450px;
+		max-width: 100%;
+	}
+	&:before {
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		content: '';
+		height: 350px;
+		position: absolute;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 25.47%, #FFFFFF 50.09%, #FFFFFF 75.23%, #FFFFFF 100%);
+	}
+	.item-text {
+		left: 40px;
+		right: 15px;
+		bottom: 40px;
+		max-width: 316px;
+		position: absolute;
+		h3 {
+			font-size: 24px;
+			font-weight: 600;
+			padding-bottom: 12px;
+		}
+		p {
+			font-size: 15px;
+		}
+	}
+}
+
+.mx-intro-item-wrap {
+	width: 100%;
+	max-width: 1140px;
+	@media #{$xxl} {
+		max-width: 1080px;
+	}
+
+}
+.mx-intro-item-top {
+	gap: 24px;
+	margin-bottom: 24px;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+}
+.mx-intro-item2 {
+	width: 100%;
+	height: 305px;
+	max-width: 420px;
+	overflow: hidden;
+	padding: 50px 40px;
+	border-radius: 20px;
+	background-color: #FBE285;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	.mx-int-shape {
+		right: -9%;
+		bottom: -9%;
+	}
+	h3 {
+		color: #1C1C1D;
+		line-height: .8;
+		font-size: 130px;
+		letter-spacing: -10px;
+	}
+	p {
+		max-width: 320px;
+		padding-top: 30px;
+	}
+}
+
+.mx-intro-item3 {
+	width: 100%;
+	height: 305px;
+	padding: 12px;
+	gap: 20px 50px;
+	max-width: 696px;
+	border-radius: 20px;
+	background-color: #fff;
+	border: 1px solid #ECECEC;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	@media #{$xs,$xxs} {
+		height: 100%;
+		flex-wrap: wrap;
+	}
+	.item-icon {
+		width: 270px;
+		height: 281px;
+		padding-top: 40px;
+		padding-left: 15px;
+		padding-right: 15px;
+		border-radius: 12px;
+		background-color: #FBFBFB;
+		@media #{$xs,$xxs} {
+			width: 100%;
+		}
+		.icon-wrap {
+			.m-icon2 {
+				left: 0;
+				right: 0;
+				bottom: -5px;
+				text-align: center;
+			}
+		}
+		.item-text {
+			h3 {
+				color: #1C1C1D;
+				font-size: 40px;
+				line-height: .9;
+				font-weight: 600;
+				padding-bottom: 15px;
+				letter-spacing: -2px;
+			}
+		}
+	}
+	.intro-text {
+		display: flex;
+		max-width: 324px;
+		padding: 28px 0px;
+		flex-direction: column;
+		justify-content: space-between;
+		@media #{$xs,$xxs} {
+			max-width: 100%;
+		}
+		h3 {
+			font-size: 24px;
+			font-weight: 600;
+			padding-bottom: 14px;
+		}
+		.mx-btn1 {
+			@media #{$xs,$xxs} {
+				margin-top: 30px;
+			}
+			a {
+				span {
+					padding: 10px 28px 8px 20px;
+					background-color: var(--mx-prime-c);
+				}
+				i {
+					width: 44px;
+					height: 44px;
+					background-color: var(--mx-prime-c);
+				}
+			}
+		}
+	}
+}
+
+.mx-intro-item-bottom {
+	gap: 24px;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+}
+
+.mx-intro-item4 {
+	width: 100%;
+	height: 395px;
+	display: flex;
+	padding: 40px;
+	overflow: hidden;
+	max-width: 697px;
+	border-radius: 20px;
+	flex-direction: column;
+	justify-content: space-between;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+		height: 100%;
+	}
+	.item-text {
+		@media #{$md,$sm,$xs,$xxs} {
+			margin-bottom: 30px;
+		}
+		h3 {
+			font-size: 24px;
+			font-weight: 600;
+			padding-bottom: 15px;
+		}
+		p {
+			max-width: 555px;
+		}
+	}
+	.item-intro-wrap {
+		@media #{$xs,$xxs} {
+			gap: 15px;
+			flex-wrap: wrap;
+		}
+		.item-wrapper {
+			gap: 16px;
+			flex-wrap: wrap;
+			.item-icon {
+				width: 60px;
+				height: 60px;
+				border-radius: 12px;
+				background-color: #fff;
+			}
+			.itm-text {
+				max-width: 200px;
+				h4 {
+					font-size: 20px;
+					font-weight: 600;
+					padding-bottom: 8px;
+				}
+			}
+		}
+	}
+}
+
+.mx-intro-item5 {
+	z-index: 1;
+	width: 100%;
+	padding: 40px;
+	max-width: 420px;
+	border-radius: 20px;
+	background-color: #BCE7F0;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	.item-text {
+		h3 {
+			font-size: 80px;
+			line-height: .9;
+			font-weight: 600;
+			padding-bottom: 10px;
+			letter-spacing: -2px;
+		}
+	}
+	.intro-shape-wrap {
+		top: 0;
+		right: 0;
+		width: 100%;
+		z-index: -1;
+		height: 100%;
+		.shape1 {
+			right: 0;
+			bottom: 0;
+			position: absolute;
+		}
+		.shape2 {
+			right: 0;
+			bottom: 0;
+			position: absolute;
+		}
+		.shape3 {
+			right: 0;
+			bottom: 0;
+			position: absolute;
+		}
+	}
+}

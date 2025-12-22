@@ -129,6 +129,41 @@ Last change:    00/00/00
 	});
 	
 
+	if ($('.mx-ser1-slider').length > 0 ) {
+		var slider = new Swiper('.mx-ser1-slider', {
+			spaceBetween: 20,
+			slidesPerView: 4,
+			loop: true,
+			// autoplay: {
+			// 	enabled: true,
+			// 	delay: 5000
+			// },
+			speed: 1000,
+			breakpoints: {
+				'1600': {
+					slidesPerView: 4,
+				},
+				'1200': {
+					slidesPerView: 3,
+				},
+				'992': {
+					slidesPerView: 2,
+				},
+				'768': {
+					slidesPerView: 1,
+				},
+				'576': {
+					slidesPerView: 1,
+				},
+				'480': {
+					slidesPerView: 1,
+				},
+				'0': {
+					slidesPerView: 1,
+				},
+			},
+		});
+	};
 
 
 

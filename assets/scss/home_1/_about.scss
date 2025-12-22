@@ -1,4 +1,18 @@
+.mx-abt-sec {
+	z-index: 1;
+	.mx-abt-shape1 {
+		left: 0;
+		right: 0;
+		bottom: 10%;
+		z-index: -1;
+		text-align: center;
+	}
+}
 .mx-abt-title {
+	gap: 30px;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
 	.subtitle {
 		span {
 			position: relative;
@@ -21,9 +35,17 @@
 		font-size: 32px;
 		max-width: 636px;
 		font-weight: 600;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			max-width: 560px;
+		}
 		span {
 			display: inline;
 			color: #00000080;	
+		}
+	}
+	.mx-ab-shape {
+		@media #{$md,$sm,$xs,$xxs} {
+			display: none;
 		}
 	}
 }
@@ -64,6 +86,10 @@
 
 .mx-abt1-content {
 	gap: 40px;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
 }
 .mx-abt1-img {
 	overflow: hidden;
@@ -73,6 +99,9 @@
 }
 .mx-abt1-text {
 	max-width: 514px;
+	@media #{$md,$sm,$xs,$xxs} {
+		padding-top: 0;
+	} 
 	p {
 		padding-bottom: 24px;
 	}
@@ -80,11 +109,16 @@
 
 .mx-abt1-img-wrapper {
 	margin-top: -88px;
+	@media #{$md,$sm,$xs,$xxs} {
+		margin-top: 0;
+	}
 }
 .mx-abt1-img2 {
-	overflow: hidden;
-	border-radius: 24px;
-	border: 10px solid #FFFFFF;
+	.item-img {
+		overflow: hidden;
+		border-radius: 24px;
+		border: 10px solid #FFFFFF;
+	}
 }
 .mx-abt1-exp {
 	z-index: 1;
@@ -92,12 +126,16 @@
 	height: 321px;
 	padding: 32px;
 	display: flex;
-	margin-right: 105px;
 	margin-top: -188px;
+	border-radius: 24px;
 	flex-direction: column;
 	background-color: #F6F7F9;
 	border: 10px solid #FFFFFF;
 	justify-content: space-between;
+	transform: translateX(-100px);
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		transform: translateX(-20px);
+	}
 	.exp-shape {
 		top: -30%;
 		right: -25%;
