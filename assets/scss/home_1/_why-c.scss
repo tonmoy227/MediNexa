@@ -1,0 +1,74 @@
+.mx-whyc-content {
+	margin: 0px 24px;
+	border-radius: 40px;
+	background-color: #fff;
+	.mx-wc-shape {
+		left: 0;
+		bottom: 0;
+		opacity: .5;
+	}
+}
+
+.mx-why-c-title {
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		justify-content: center !important;
+	}
+	.mx-sec-title {
+		max-width: 650px;
+	}
+}
+.mx-why-c-content {
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		margin-top: 40px;
+		justify-content:  flex-start !important;
+	}
+}
+.mx-wc-img {
+	top: 0;
+	left: 0;
+	clip-path: polygon( 0% 4.267%,0% 4.267%,0.055% 3.575%,0.212% 2.918%,0.465% 2.306%,0.804% 1.747%,1.22% 1.25%,1.706% 0.823%,2.252% 0.476%,2.85% 0.218%,3.491% 0.056%,4.167% 0%,95.833% 0%,95.833% 0%,96.509% 0.056%,97.15% 0.218%,97.748% 0.476%,98.294% 0.823%,98.78% 1.25%,99.196% 1.747%,99.535% 2.306%,99.788% 2.918%,99.945% 3.575%,100% 4.267%,100% 49.067%,100% 49.067%,99.945% 49.759%,99.788% 50.415%,99.535% 51.027%,99.196% 51.586%,98.78% 52.084%,98.294% 52.51%,97.748% 52.857%,97.15% 53.116%,96.509% 53.277%,95.833% 53.333%,55.729% 53.333%,55.729% 53.333%,55.053% 53.389%,54.412% 53.551%,53.814% 53.81%,53.268% 54.157%,52.783% 54.583%,52.366% 55.08%,52.028% 55.639%,51.775% 56.251%,51.617% 56.908%,51.563% 57.6%,51.563% 95.733%,51.563% 95.733%,51.508% 96.425%,51.35% 97.082%,51.097% 97.694%,50.759% 98.253%,50.342% 98.75%,49.857% 99.177%,49.311% 99.524%,48.713% 99.782%,48.072% 99.944%,47.396% 100%,4.167% 100%,4.167% 100%,3.491% 99.944%,2.85% 99.782%,2.252% 99.524%,1.706% 99.177%,1.22% 98.75%,0.804% 98.253%,0.465% 97.694%,0.212% 97.082%,0.055% 96.425%,0% 95.733%,0% 4.267% );
+	@media #{$xxl} {
+		left: -10%;
+	}
+	@media #{$xl} {
+		left: -30%;
+	}
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		display: none;
+	}
+}
+.mx-wc-wrap {
+	gap: 30px 54px;
+	display: grid;
+	max-width: 1094px;
+	grid-template-columns: 1fr 1fr 1fr;
+	@media #{$sm} {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media #{$xs,$xxs} {
+		grid-template-columns: 1fr;
+	}
+}
+
+.mx-wc1-item {
+	max-width: 330px;
+	@media #{$xs,$xxs} {
+		max-width: 100%;
+	}
+	.item-icon {
+		color: #fff;
+		width: 72px;
+		height: 72px;
+		font-size: 30px;
+		margin-bottom: 30px;
+		border-radius: 12px;
+		background-color: var(--mx-prime-c2);
+	}
+	.item-text {
+		h3 {
+			font-size: 20px;
+			font-weight: 600;
+			padding-bottom: 12px;
+		}
+	}
+}

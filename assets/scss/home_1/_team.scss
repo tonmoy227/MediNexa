@@ -1,0 +1,47 @@
+.mx-team1-top {
+	.mx-sec-title {
+		max-width: 550px;
+	}
+	.top-desc {
+		max-width: 440px;
+	}
+}
+
+.mx-team1-item {
+	padding-left: 40px;
+	.item-social {
+		left: 0;
+		bottom: 0;
+		width: 84px;
+		height: 252px;
+		padding-top: 35px;
+		text-align: center;
+		border-radius: 12px;
+		background-color: var(--mx-prime-c);
+		a,span {
+			width: 40px;
+			height: 40px;
+			display: flex;
+			margin: 0 auto;
+			border-radius: 100%;
+			align-items: center;
+			border: 1px solid #fff;
+			justify-content: center;
+		}
+		a {
+			color: #fff;
+			margin-bottom: 6px;
+		}
+		span {
+			background-color: #fff;
+		}
+	}
+	.item-img {
+		max-width: 300px;
+		border-radius: 20px;
+		border: 10px solid #FFFFFF;
+		img {
+			border-radius: 10px;
+		}
+	}
+}
