@@ -1,0 +1,246 @@
+.mx-testi1-sec {
+	margin: 0px 24px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		margin: 0;
+	}
+}
+.mx-testi1-content {
+	z-index: 1;
+	padding-top: 240px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		padding-top: 80px;
+	}
+}
+.mx-testi1-bg {
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 40px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		border-radius: 0;
+	}
+	&:before {
+		top: 0;
+		left: 0;
+		width: 100%;
+		content: '';
+		height: 100%;
+		position: absolute;
+		background: linear-gradient(270deg, rgba(18, 28, 39, 0.7) 0.85%, rgba(18, 28, 39, 0.21) 99.15%);
+		img {
+			mix-blend-mode: luminosity;
+		}
+	}
+}
+.mx-testi1-slider-wrap {
+	width: 100%;
+	padding: 40px;
+	max-width: 578px;
+	position: relative;
+	border-radius: 30px;
+	background-color: #F6F7F9;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	@media #{$xl} {
+		max-width: 480px;
+	}
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		border-radius: 30px;
+		max-width: 100%;
+	}
+	@media #{$xxs} {
+		padding: 40px 15px;
+	}
+	&:before,
+	&:after {
+		left: -36px;
+		bottom: -1px;
+		width: 37px;
+		content: '';
+		height: 39px;
+		position: absolute;
+		background-color: #F6F7F9;
+		clip-path: polygon( 0% 100%,0% 100%,21.808% 95.746%,40.357% 88.738%,55.873% 79.531%,68.584% 68.677%,78.716% 56.731%,86.497% 44.246%,92.154% 31.777%,95.914% 19.877%,98.003% 9.1%,98.649% 0%,98.649% 100%,0% 100% );
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+	&:after {
+		left: auto;
+		right: -35px;
+		clip-path: polygon( 97.5% 100%,97.5% 100%,77.456% 97.2%,60% 91.446%,45.019% 83.246%,32.4% 73.108%,22.031% 61.538%,13.8% 49.046%,7.594% 36.138%,3.3% 23.323%,0.806% 11.108%,0% 0%,0% 98.718%,0% 98.718%,18.255% 99.067%,34.74% 99.35%,49.41% 99.573%,62.219% 99.742%,73.124% 99.865%,82.079% 99.947%,89.039% 99.995%,93.959% 100.016%,96.795% 100.015%,97.5% 100% );
+	}
+	.mx-tst-pagi {
+		margin-top: 40px;
+		.swiper-pagination-bullet {
+			width: 48px;
+			opacity: .1;
+			height: 12px;
+			border-radius: 32px;
+			transition: all 500ms ease-in-out;
+			background-color: var(--mx-prime-c2);
+			&:is(.swiper-pagination-bullet-active) {
+				opacity: 1;
+			}
+		}
+	}
+}
+.mx-testi1-wrapper {
+	gap: 30px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+}
+.mx-testi1-item {
+	width: 100%;
+	.item-inner {
+		padding: 40px;
+		border-radius: 24px;
+		background-color: var(--mx-prime-c2);
+		ul {
+			margin-bottom: 30px;
+		}
+		li {
+			color: #FFCC53;
+		}
+		p {
+			color: #fff;
+			font-size: 18px;
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			border-bottom: 1px dashed #fff;
+		}
+	}
+	.item-bottom {
+		gap: 16px;
+		flex-wrap: wrap;
+		.auth-inner {
+			gap: 16px;
+			flex-wrap: wrap;
+		}
+		.btm-img {
+			width: 60px;
+			height: 60px;
+			overflow: hidden;
+			border-radius: 12px;
+		}
+		.btm-text {
+			h3 {
+				color: #fff;
+				font-size: 18px;
+				font-weight: 600;
+				padding-bottom: 5px;
+			}
+			span {
+				color: #EAECF0;
+			}
+		}
+		a {
+			color: #fff;
+			font-size: 30px;
+		}
+	}
+}
+
+.mx-testi1-text-wrap {
+	max-width: 748px;
+	.mx-sec-title {
+		.subtitle {
+			span {
+				color: #fff;
+				border: 1px solid #fff;
+				&:before {
+					background-color: #fff;	
+				}
+			}
+		}
+		.sec_title {
+			color: #fff;
+			font-size: 60px;
+		}
+	}
+}
+
+.mx-testi1-ratting {
+	width: 100%;
+	padding: 40px;
+	max-width: 545px;
+	margin-left: 90px;
+	margin-top: 100px;
+	border-radius: 30px;
+	position: relative;
+	background-color: #F6F7F9;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	@media #{$xl} {
+		max-width: 450px;
+	}
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+		margin-left: 0;
+	}
+	@media #{$xxs} {
+		padding: 30px 15px;
+	}
+	&:before,
+	&:after {
+		left: -36px;
+		bottom: -1px;
+		width: 37px;
+		content: '';
+		height: 39px;
+		position: absolute;
+		background-color: #F6F7F9;
+		clip-path: polygon( 0% 100%,0% 100%,21.808% 95.746%,40.357% 88.738%,55.873% 79.531%,68.584% 68.677%,78.716% 56.731%,86.497% 44.246%,92.154% 31.777%,95.914% 19.877%,98.003% 9.1%,98.649% 0%,98.649% 100%,0% 100% );
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+	&:after {
+		left: auto;
+		right: -35px;
+		clip-path: polygon( 97.5% 100%,97.5% 100%,77.456% 97.2%,60% 91.446%,45.019% 83.246%,32.4% 73.108%,22.031% 61.538%,13.8% 49.046%,7.594% 36.138%,3.3% 23.323%,0.806% 11.108%,0% 0%,0% 98.718%,0% 98.718%,18.255% 99.067%,34.74% 99.35%,49.41% 99.573%,62.219% 99.742%,73.124% 99.865%,82.079% 99.947%,89.039% 99.995%,93.959% 100.016%,96.795% 100.015%,97.5% 100% );
+	}
+	.inner-item-wrap {
+		gap: 20px;
+		width: 100%;
+		padding: 40px;
+		border-radius: 24px;
+		background-color: var(--mx-prime-c2);
+		@media #{$xxs} {
+			flex-wrap: wrap;
+		}
+	}
+	.item-wrap {
+		position: relative;
+		&:before {
+			top: 5px;
+			width: 1px;
+			content: '';
+			height: 88px;
+			right: -70px; 
+			position: absolute;
+			background-color: #fff;
+			@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+				display: none;
+			}
+		}
+		h3 {
+			color: #fff;
+			font-size: 48px;
+			font-weight: 700;
+			padding-bottom: 8px;
+		}
+		p {
+			color: #fff;
+		}
+		&:last-child {
+			&:before {
+				display: none;
+			}
+		}
+	}
+}

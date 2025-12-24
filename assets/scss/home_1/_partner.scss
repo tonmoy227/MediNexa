@@ -1,0 +1,36 @@
+.mx-partner-sec {
+	margin: 0px 24px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		margin: 0;
+	}
+	.mx-sec-title {
+		margin: 0 auto;
+		max-width: 685px;
+	}
+}
+.mx-spon-item {
+	width: 100%;
+	height: 100px;
+	padding: 15px;
+	max-width: 312px;
+	border-radius: 16px;
+	border: 1px solid #EAECF0;
+}
+
+.mx-partner-wrap {
+	border-radius: 40px;
+	background-color: #fff;
+}
+
+.mx-partner-content {
+	margin-top: -50px;
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		margin-top: 30px;
+	}
+}
+.mx-part-top {
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
+}

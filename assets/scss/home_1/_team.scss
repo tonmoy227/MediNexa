@@ -1,4 +1,8 @@
 .mx-team1-top {
+	@media #{$md,$sm,$xs,$xxs} {
+		gap: 30px;
+		flex-wrap: wrap;
+	}
 	.mx-sec-title {
 		max-width: 550px;
 	}
@@ -7,17 +11,47 @@
 	}
 }
 
+.mx-team1-content {
+	gap: 24px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	@media #{$lg,$md} {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media #{$sm,$xs,$xxs} {
+		grid-template-columns:  1fr;
+	}
+}
+
 .mx-team1-item {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 504px;
 	padding-left: 40px;
 	.item-social {
 		left: 0;
-		bottom: 0;
+		z-index: 1;
 		width: 84px;
+		bottom: 50px;
 		height: 252px;
 		padding-top: 35px;
 		text-align: center;
 		border-radius: 12px;
-		background-color: var(--mx-prime-c);
+		@media #{$xxs} {
+			bottom: 130px;
+		}
+		&:before {
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			z-index: -1;
+			content: '';
+			height: 84px;
+			position: absolute;
+			border-radius: 12px;
+			transition: all 500ms ease-in-out;
+			background-color: var(--mx-prime-c);
+		}
 		a,span {
 			width: 40px;
 			height: 40px;
@@ -29,11 +63,16 @@
 			justify-content: center;
 		}
 		a {
+			opacity: 0;
 			color: #fff;
+			visibility: hidden;
 			margin-bottom: 6px;
+			transform: translateY(10px);
 		}
 		span {
+			margin-top: 20px;
 			background-color: #fff;
+			transition: all 500ms ease-in-out;
 		}
 	}
 	.item-img {
@@ -42,6 +81,48 @@
 		border: 10px solid #FFFFFF;
 		img {
 			border-radius: 10px;
+		}
+	}
+	.item-text {
+		right: 16px;
+		bottom: 40px;
+		position: absolute;
+		border-radius: 10px;
+		background-color: #fff;
+		padding: 16px 16px 12px;
+		transition: all 500ms ease-in-out;
+		border-bottom: 4px solid transparent;
+		@media #{$xxs} {
+			position: static;
+		}
+		h3 {
+			font-size: 20px;
+			padding-bottom: 5px;
+		}
+		span {
+
+		}
+	}
+	&:hover {
+		.item-text {
+			transform: translateY(-10px);
+			border-bottom: 4px solid var(--mx-prime-c2);
+		}
+		.item-social {
+			&:before {
+				height: 100%;
+				background-color: var(--mx-prime-c2);
+			}
+			a {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0px);
+			}
+			span {
+				color: #fff;
+				background-color: #FF0000;
+				border: 1px solid #FF0000;
+			}
 		}
 	}
 }

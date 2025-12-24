@@ -108,6 +108,26 @@ Last change:    00/00/00
 		fixedContentPos: false,
 	});
 
+	$('.marquee-left').marquee({
+		gap: 0,
+		speed: 40,
+		delayBeforeStart: 0,
+		direction: 'left',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
+	$('.marquee-right').marquee({
+		gap: 28,
+		speed: 40,
+		delayBeforeStart: 0,
+		direction: 'right',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
+
+
 	// windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
@@ -134,10 +154,10 @@ Last change:    00/00/00
 			spaceBetween: 20,
 			slidesPerView: 4,
 			loop: true,
-			// autoplay: {
-			// 	enabled: true,
-			// 	delay: 5000
-			// },
+			autoplay: {
+				enabled: true,
+				delay: 5000
+			},
 			speed: 1000,
 			breakpoints: {
 				'1600': {
@@ -162,6 +182,24 @@ Last change:    00/00/00
 					slidesPerView: 1,
 				},
 			},
+		});
+	};
+
+
+	if ($('.mx-testi1-slider').length > 0 ) {
+		var slider = new Swiper('.mx-testi1-slider', {
+			slidesPerView: 1,
+			loop: true,
+			spaceBetween: 28,
+			speed: 1000,
+			autoplay: {
+				enabled: true,
+				delay: 6000
+			},
+			pagination: {
+				el: ".mx-tst-pagi",
+				clickable: true,
+			}
 		});
 	};
 

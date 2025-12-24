@@ -1,0 +1,65 @@
+.mx-text-scrol-sec {
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		padding-bottom: 0;
+	}
+}
+.mx-text-scrol1-bg {
+	top: 0px;
+	z-index: 1;
+	width: 115%;
+	left: -25px;
+	background-color: #fff;
+	transform: rotate(-2deg);
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		top: 0;
+		transform: rotate(0deg);
+	}
+	.mx-txt-bg {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		&:before {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			content: '';
+			opacity: .51;
+			position: absolute;
+			background-color: #07000E;
+		}
+	}
+}
+.mx-text-scrol1 {
+	padding: 34px 0px 32px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		padding: 25px 0px;
+	}
+	h2 {
+		color: #000000;
+		font-size: 40px;
+		margin: 0px 10px;
+		display: inline-block;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			font-size: 30px;
+		}
+	}
+}
+.mx-text-scrol2-bg {
+	z-index: 2;
+	left: -25px;
+	width: 115%;
+	transform: rotate(0deg);
+	background: var(--mx-prime-c);
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		top: 0;
+		transform: rotate(0deg);
+	}
+	.mx-text-scrol1 {
+		h2 {
+			color: #fff;
+		}
+	}
+}

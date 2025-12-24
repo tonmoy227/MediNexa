@@ -307,7 +307,11 @@ a {
 	}
 }
 
-
+.marquee-left,
+.marquee-right{
+	overflow: hidden;
+	display: flow-root;
+}
 // txa-common-css-start
 
 @for $i from 1 through 40 {
