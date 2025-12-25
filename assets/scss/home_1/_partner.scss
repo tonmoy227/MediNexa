@@ -15,6 +15,15 @@
 	max-width: 312px;
 	border-radius: 16px;
 	border: 1px solid #EAECF0;
+	img {
+		transition: all 300ms ease-in-out;
+	}
+	&:hover {
+		img {
+			filter: grayscale(1);
+			transform: scale(1.05);
+		}
+	}
 }
 
 .mx-partner-wrap {
@@ -31,6 +40,6 @@
 .mx-part-top {
 	@media #{$md,$sm,$xs,$xxs} {
 		flex-wrap: wrap;
-		justify-content: center !important;
+		justify-content: center  !important;
 	}
 }

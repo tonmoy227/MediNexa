@@ -7,6 +7,7 @@
 .mx-appoint-content {
 	overflow: hidden;
 	border-radius: 40px;
+	background-attachment: fixed;
 }
 .mx-appoint-form {
 	padding: 48px;
@@ -22,6 +23,21 @@
 			font-size: 40px;
 			font-weight: 600;
 			padding-bottom: 10px;
+			@media #{$md} {
+				font-size: 38px;
+			}
+			@media #{$sm} {
+				font-size: 36px;
+			}
+			@media #{$xs} {
+				font-size: 34px;
+			}
+			@media #{$xxs} {
+				font-size: 30px;
+			}
+			@media #{$xxxs} {
+				font-size: 28px;
+			}
 		}
 	}
 	.mx-form-input {
@@ -61,6 +77,10 @@
 		border: none;
 		margin-top: 30px;
 		border-radius: 32px;
+		transition: all 300ms ease-in-out;
 		background-color: var(--mx-prime-c2);
+		&:hover {
+			background-color: var(--mx-prime-c);
+		}
 	}
 }

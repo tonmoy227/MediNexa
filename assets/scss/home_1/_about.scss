@@ -136,6 +136,11 @@
 	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
 		transform: translateX(-20px);
 	}
+	.item-fav {
+		width: 40px;
+		height: 40px;
+		animation: hithere 1500ms ease-in-out infinite;
+	}
 	.exp-shape {
 		top: -30%;
 		right: -25%;

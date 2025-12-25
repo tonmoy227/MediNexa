@@ -160,6 +160,21 @@
 		.sec_title {
 			color: #fff;
 			font-size: 60px;
+			@media #{$md} {
+				font-size: 38px;
+			}
+			@media #{$sm} {
+				font-size: 36px;
+			}
+			@media #{$xs} {
+				font-size: 34px;
+			}
+			@media #{$xxs} {
+				font-size: 30px;
+			}
+			@media #{$xxxs} {
+				font-size: 28px;
+			}
 		}
 	}
 }

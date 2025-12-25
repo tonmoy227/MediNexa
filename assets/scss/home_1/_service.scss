@@ -44,14 +44,21 @@
 			color: #fff;
 		}
 		.mx-btn1 {
-			span {
-				color: var(--mx-prime-c2);
-				background-color: #fff;
-			}
-			i {
-				background-color: #fff;
-				color: var(--mx-prime-c2);
-				border: 3px solid var(--mx-prime-c2);
+			a {
+				span {
+					color: var(--mx-prime-c2);
+					background-color: #fff;
+				}
+				i {
+					background-color: #fff;
+					color: var(--mx-prime-c2);
+					border: 3px solid var(--mx-prime-c2);
+				}
+				&:hover {
+					span {
+						color: #fff;
+					}
+				}
 			}
 		}
 	}
@@ -147,6 +154,7 @@
 		}
 		.mx-btn1 {
 			a {
+
 				span {
 					color: #000000;
 					background-color: #F6F7F9;
@@ -157,6 +165,11 @@
 					width: 44px;
 					height: 44px;
 					background-color: var(--mx-prime-c);
+				}
+				&:hover {
+					span {
+						color: #fff;
+					}
 				}
 			}
 		}
