@@ -1,0 +1,142 @@
+.mx-ab2-sec {
+	.mx-ab2-shape {
+		right: 70px;
+		bottom: 70px;
+	}
+}
+.mx-ab2-content {
+	gap: 40px;
+	display: flex;
+	justify-content: space-between;
+}
+.mx-ab2-img-wrapper {
+	z-index: 1;
+	width: 100%;
+	max-width: 708px;
+	position: relative;
+	&:before,
+	&:after {
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		content: '';
+		margin: 0 auto;
+		max-width: 388px;
+		position: absolute;
+		border-radius: 320px;
+		background: linear-gradient(180deg, #3368C6 0%, rgba(51, 104, 198, 0.6) 25.35%, rgba(51, 104, 198, 0.2) 50.34%, rgba(51, 104, 198, 0) 100%);
+
+	}
+	&:after {
+		background-color: #fff;
+		border-bottom: 12px solid var(--mx-prime-c);
+	}
+	.item-exp {
+		left: 0;
+		top: 50%;
+		right: 0;
+		width: 200px;
+		margin: 0 auto;
+		height: 200px;
+		flex-wrap: wrap;
+		position: absolute;
+		border-radius: 100%;
+		border: 10px solid #F6F7F9;
+		transform: translateY(-50%);
+		background-color: var(--mx-prime-c);
+		h3 {
+			width: 100%;
+			color: #fff;
+			font-size: 40px;
+			font-weight: 700;
+			padding-bottom: 8px;
+		}
+		p {
+			color: #fff;
+			margin: 0 auto;
+			font-size: 16px;
+			max-width: 98px;
+		}
+	}
+	.item-img1 {
+		max-width: 324px;
+		overflow: hidden;
+		border-radius: 320px;
+		border: 10px solid #F6F7F9;
+	}
+	.item-img2 {
+		max-width: 544px;
+		overflow: hidden;
+		max-width: 324px;
+		margin-top: 120px;
+		border-radius: 320px;
+		border: 10px solid #F6F7F9;
+	}
+}
+
+.mx-ab2-text-wrap {
+	width: 100%;
+	max-width: 732px;
+}
+
+.mx-ab2-ft-wrap {
+	gap: 24px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.mx-ab2-ft {
+	position: relative;
+	border-radius: 12px;
+	padding: 24px 32px 32px;
+	border: 1px solid #2727271A;
+	&:before {
+		left: 0;
+		top: 24px;
+		width: 4px;
+		height: 72px;
+		content: '';
+		position: absolute;
+		background-color: var(--mx-prime-c);
+	}
+	.item-icon {
+		width: 72px;
+		height: 72px;
+		margin-bottom: 20px;
+		border-radius: 12px;
+		background-color: var(--mx-prime-c);
+	}
+	.item-text {
+		h3 {
+			font-size: 20px;
+			font-weight: 600;
+			padding-bottom: 12px;	
+		}
+	}
+}
+
+.mx-ab2-bottom {
+	gap: 32px;
+}
+.mx-ab2-cta {
+	gap: 16px;
+	.item-icon {
+		width: 54px;
+		height: 54px;
+		border-radius: 100%;
+		background-color: var(--mx-prime-c);
+	}
+	.item-text {
+		span {
+			padding-bottom: 4px;
+		}
+		h3 {
+			color: #000000;
+			font-size: 20px;
+			font-weight: 600;
+		}
+	}
+}

@@ -342,6 +342,12 @@ a {
 			}
 		}
 	}
+	&:is(.ver_2) {
+		i {
+			color: #000;
+			background-color: #fff;
+		}
+	}
 }
 
 .mx-sec-title {
