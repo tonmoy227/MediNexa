@@ -1,0 +1,73 @@
+.mx-appoint2-sec {
+	margin: 0px 32px;
+}
+
+
+.mx-appoint2-text {
+	max-width: 722px;
+	.mx-sec-title {
+		.subtitle {
+			span {
+				color: #fff;
+				border: 1px solid #fff;
+				&:before {
+					background-color: #fff;
+				}
+			}
+		}
+		.sec_title {
+			color: #fff;
+		}
+		p {
+			color: #fff;
+		}
+	}
+}
+
+.mx-appoint2-wrapper {
+	z-index: 1;
+	.mx-appoint-bg {
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: -1;
+		height: 520px;
+		overflow: hidden;
+		border-radius: 40px;
+		&:before {
+			top: 0;
+			left: 0;
+			width: 100%;
+			content: '';
+			height: 100%;
+			position: absolute;
+			background: linear-gradient(90deg, #09243C 0%, rgba(9, 36, 60, 0.2) 100%);
+		}
+	}
+}
+
+.mx-appoint2-list {
+	margin-top: 205px;
+}
+
+.mx-appt-list {
+	padding: 8px;
+	margin-bottom: 26px;
+	border-radius: 12px;
+	border: 1px solid #2727271A;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	a {
+		gap: 20px;
+	}
+	.item-icon {
+		width: 72px;
+		height: 72px;
+		border-radius: 10px;
+		background-color: var(--mx-prime-c2);
+	}
+	.item-text {
+		color: #000000;
+	}
+}

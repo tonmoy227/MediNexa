@@ -507,4 +507,42 @@ if ($('.mx-ser2-slider').length > 0 ) {
 	});
 };
 
+
+if ($('.mx-case1-slider').length > 0 ) {
+	var slider = new Swiper('.mx-case1-slider', {
+		slidesPerView: 5,
+		loop: true,
+		spaceBetween: 24,
+		speed: 1000,
+		autoplay: {
+			enabled: true,
+			delay: 6000
+		},
+		breakpoints: {
+			'1600': {
+				slidesPerView: 5,
+			},
+			'1200': {
+				slidesPerView: 4,
+			},
+			'992': {
+				slidesPerView: 3,
+			},
+			'991': {
+				slidesPerView: 2,
+			},
+			'768': {
+				slidesPerView: 2,
+			},
+			'680': {
+				slidesPerView: 2,
+			},
+			'0': {
+				slidesPerView: 1,
+			},
+		},
+	});
+};
+
+
 })(jQuery);

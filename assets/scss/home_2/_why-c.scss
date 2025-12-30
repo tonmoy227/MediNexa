@@ -15,6 +15,10 @@
 		left: 0;
 		bottom: 0;
 	}
+	.mx-wc2-shape3 {
+		left: 0;
+		bottom: 0;
+	}
 }
 .mx-wc2-content {
 	gap: 40px;
@@ -81,6 +85,23 @@
 				font-weight: 600;
 				padding-bottom: 10px;
 			}
+		}
+	}
+}
+
+.mx-wc2-scrolbar {
+	.wc2-scroler {
+		width: 6px;
+		height: 300px;
+		position: relative;
+		background-color: #fff;
+		.wc2-scrbar {
+			top: 0;
+			left: 0;
+			width: 6px;
+			height: 60px;
+			position: absolute;
+			background-color: var(--mx-prime-c);
 		}
 	}
 }

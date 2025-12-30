@@ -1,0 +1,136 @@
+.mx-testi2-sec {
+	.mx-sec-title {
+		margin: 0 auto;
+		max-width: 770px;
+	}
+}
+.mx-testi2-top {
+	gap: 12px;
+}
+.mx-testi2-item1 {
+	width: 100%;
+	max-width: 372px;
+	.inner-item {
+		width: 100%;
+		border-radius: 24px;
+		background-color: #fff;
+		padding: 32px 32px 26px;
+		.mx-tst-logo {
+			top: 32px;
+			right: 32px;
+		}
+		.item-img {
+			width: 52px;
+			height: 52px;
+			overflow: hidden;
+			margin-bottom: 20px;
+			border-radius: 100%;
+		}
+		.item-text {
+			h3 {
+				font-size: 20px;
+				padding-bottom: 6px;
+			}
+			p {
+				color: #272727;
+				padding-top: 30px;
+			}
+		}
+	}
+}
+
+.mx-testi2-item2 {
+	width: 100%;
+	max-width: 408px;
+	.inner-item {
+		width: 100%;
+		padding: 32px;
+		max-width: 408px;
+		border-radius: 24px;
+		background-color: var(--mx-prime-c2);
+		.item-text-top {
+			.item-text {
+				h3 {
+					color: #fff;
+					font-size: 20px;
+				}
+				span {
+					color: #fff;
+				}
+			}
+			.item-rate {
+				gap: 8px;
+				color: #fff;
+				display: flex;
+				align-items: center;
+				i {
+					width: 40px;
+					height: 40px;
+					color: #FFBB00;
+					display: flex;
+					font-size: 18px;
+					border-radius: 100%;
+					align-items: center;
+					background: #FFFFFF24;
+					justify-content: center;
+				}
+			}
+		}
+		p {
+			color: #fff;
+			padding: 30px 0px;
+		}
+	}
+	&:is(.ver_2) {
+		.inner-item {
+			background-color: var(--mx-prime-c);
+		}
+	}
+}
+
+.mx-testi2-item3 {
+	width: 100%;
+	max-width: 336px;
+	.inner-item {
+		width: 100%;
+		padding: 32px;
+		background: #F6F7F9;
+		border-radius: 24px;
+		border: 4px solid #FFFFFF;
+		.item-rate {
+			color: #000000;
+			font-size: 20px;
+			i {
+				color: #FFBB00;
+			}
+		}
+		.item-text {
+			margin-top: 80px;
+			h3 {
+				font-size: 20px;
+				padding-bottom: 5px;
+			}
+		}
+	}
+}
+.mx-testi2-item4 {
+	.inner-item {
+		padding: 12px;
+		border-radius: 24px;
+		background-color: #fff;
+		.item-img {
+			overflow: hidden;
+			border-radius: 24px;
+		}
+	}
+	.item-text {
+		padding: 20px;
+		h3 {
+			font-size: 20px;
+			padding-bottom: 4px;
+		}
+		p {
+			padding-top: 14px;
+		}
+	}
+}
