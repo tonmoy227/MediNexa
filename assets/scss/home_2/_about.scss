@@ -8,6 +8,10 @@
 	gap: 40px;
 	display: flex;
 	justify-content: space-between;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 .mx-ab2-img-wrapper {
 	z-index: 1;
@@ -38,6 +42,7 @@
 		left: 0;
 		top: 50%;
 		right: 0;
+		z-index: 2;
 		width: 200px;
 		margin: 0 auto;
 		height: 200px;
@@ -74,6 +79,9 @@
 		margin-top: 120px;
 		border-radius: 320px;
 		border: 10px solid #F6F7F9;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			margin-top: 0;
+		}
 	}
 }
 
@@ -86,6 +94,9 @@
 	gap: 24px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	@media #{$xs,$xxs} {
+		grid-template-columns: 1fr;
+	}
 }
 
 .mx-ab2-ft {
@@ -101,6 +112,7 @@
 		content: '';
 		position: absolute;
 		background-color: var(--mx-prime-c);
+		transition: all 500ms ease-in-out;
 	}
 	.item-icon {
 		width: 72px;
@@ -116,10 +128,18 @@
 			padding-bottom: 12px;	
 		}
 	}
+	&:hover {
+		&:before {
+			top: 50%;
+		}
+	}
 }
 
 .mx-ab2-bottom {
 	gap: 32px;
+	@media #{$xs,$xxs} {
+		flex-wrap: wrap;
+	}
 }
 .mx-ab2-cta {
 	gap: 16px;

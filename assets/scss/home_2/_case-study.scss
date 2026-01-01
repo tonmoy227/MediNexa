@@ -1,4 +1,5 @@
 .mx-case1-top {
+	gap: 30px;
 	.mx-sec-title {
 		max-width: 770px;
 	}
@@ -9,14 +10,24 @@
 .mx-case1-slider {
 	width: 130%;
 	margin-left: -220px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		width: 100%;
+		margin-left: 0;
+		padding: 0px 15px;
+	}
 }
 .mx-case1-item {
+	margin: 0 auto;
+	max-width: 480px;
 	padding-bottom: 60px;
 	transition: all 500ms ease-in-out;
 	.item-img {
 		overflow: hidden;
 		margin-bottom: 24px;
 		border-radius: 20px;
+		img {
+			transition: all 500ms ease-in-out;
+		}
 	}
 	.item-tag {
 		top: 20px;
@@ -33,11 +44,26 @@
 			font-size: 24px;
 			font-weight: 600;
 			padding-bottom: 8px;
+			&:hover {
+				color: var(--mx-prime-c);
+			}
 		}
 		.read_more {
 			color: #000000;
 			i {
 				margin-left: 8px;
+			}
+			&:hover {
+				letter-spacing: 1px;
+				color: var(--mx-prime-c);
+			}
+		}
+	}
+	&:hover {
+		.item-img {
+			img {
+				filter: grayscale(1);
+				transform: scale(1.1);
 			}
 		}
 	}

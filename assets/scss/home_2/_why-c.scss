@@ -1,5 +1,8 @@
 .mx-wc2-sec {
 	padding: 0px 32px;
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		padding: 0px 10px;
+	}
 }
 
 .mx-wc2-wrapper {
@@ -14,18 +17,27 @@
 	.mx-wc2-shape2 {
 		left: 0;
 		bottom: 0;
+		z-index: -2;
 	}
 	.mx-wc2-shape3 {
 		left: 0;
 		bottom: 0;
+		z-index: -2;
 	}
 }
 .mx-wc2-content {
 	gap: 40px;
 	justify-content: space-between;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 .mx-wc2-text-wrap {
 	max-width: 682px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		max-width: 500px;
+	}
 	.mx-sec-title {
 		.subtitle {
 			span {
@@ -53,6 +65,13 @@
 			color: var(--mx-prime-c2);
 			border-color: var(--mx-prime-c2);
 		}
+		a {
+			&:hover {
+				span {
+					color: #fff;
+				}
+			}
+		}
 	}
 }
 
@@ -65,6 +84,9 @@
 	.item-img {
 		overflow: hidden;
 		border-radius: 16px;
+		img {
+			transition: all 300ms ease-in-out;
+		}
 	}
 	.item-text {
 		z-index: 1;
@@ -87,9 +109,19 @@
 			}
 		}
 	}
+	&:hover {
+		.item-img {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
 }
 
 .mx-wc2-scrolbar {
+	@media #{$md,$sm,$xs,$xxs} {
+		display: none;
+	}
 	.wc2-scroler {
 		width: 6px;
 		height: 300px;

@@ -261,9 +261,17 @@ Last change:    00/00/00
 					});
 				});
 
+				const MXHero2 = gsap.timeline();
+				MXHero2
+				.from(".mx-hero2-img-wrap", {   scale: 1.3, opacity: 0,  duration: 1.5,  ease: "power2.inOut" })
+				.from(".mx-hero2-text", {   y: -100, opacity: 0,  duration: 1,  ease: "power2.inOut" },"< = .55")
+				.from(".mx-hero2-desc", {   x: 100, opacity: 0,  duration: 1,  ease: "power2.inOut" },"< ")
+				.from(".mx-hero2-video", {   x: -100, opacity: 0,  duration: 1,  ease: "power2.inOut" },"<")
+
+
 			}, 700);
-		})		
-	});
+})		
+});
 if($('.mx-itm-title').length) {
 	var txtheading = $(".mx-itm-title");
 	if(txtheading.length == 0) return; gsap.registerPlugin(SplitText); txtheading.each(function(index, el) {
@@ -431,6 +439,22 @@ gsap.utils.toArray(' .top_view').forEach((el, index) => {
 	.from(el, { opacity: 0, scale: 1, y: "300"})
 });
 
+gsap.utils.toArray(' .zoom_in').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1.5,
+			start: "top 100%",
+			end: "top 70%",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	})
+
+	tlcta
+	.set(el, {transformOrigin: 'center center'})
+	.from(el, { opacity: 0, scale: .3, y: "-100"})
+});
 
 gsap.utils.toArray(' .top_view2').forEach((el, index) => { 
 	let tlcta = gsap.timeline({
@@ -543,6 +567,57 @@ if ($('.mx-case1-slider').length > 0 ) {
 		},
 	});
 };
+
+
+if ($('.scene').length > 0 ) {
+	$('.scene').parallax({
+		scalarX: 10.0,
+		scalarY: 10.0,
+	}); 
+}
+
+
+if (window.matchMedia("(min-width: 992px)").matches) {
+	const serials = gsap.utils.toArray(".lg-serial");
+
+	var ATWORKPROCESS = gsap.timeline({
+		scrollTrigger: {
+			trigger: '.mx-wc2-scrolbar',
+			start: "top 6%",
+			end: "bottom 60%",
+			endTrigger: ".mx-wc2-sec",
+			scrub: 1,
+			pin: true,
+			pinSpacing: false,
+			markers: false,
+		}
+	});
+
+	ATWORKPROCESS.fromTo(".wc2-scrbar",
+		{ height: "60px" },
+		{ height: "100%", ease: "none" },
+		0 
+		);
+
+	const CaseStudy = gsap.utils.toArray(".mx-wc2-item");
+	const animateCard = (card, wrapper, index) => {
+		gsap.to(card, {
+			scrollTrigger: {
+				trigger: wrapper,
+				scrub: 1,
+				start: `top ${50 + 50 * index}`, 
+				endTrigger: ".mx-wc2-sec",
+				end: "bottom 70%",
+				pin: wrapper,
+				pinSpacing: false,
+				markers: false,
+			},
+		});
+	};
+	CaseStudy.forEach((wrapper, index) => animateCard([index], wrapper, index));
+}
+
+
 
 
 })(jQuery);

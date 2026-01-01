@@ -1,10 +1,21 @@
 .mx-appoint2-sec {
 	margin: 0px 32px;
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		margin: 0px 15px;
+	}
 }
 
-
+.mx-appoint2-content {
+	gap: 30px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+}
 .mx-appoint2-text {
 	max-width: 722px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
 	.mx-sec-title {
 		.subtitle {
 			span {
@@ -51,23 +62,83 @@
 }
 
 .mx-appt-list {
-	padding: 8px;
 	margin-bottom: 26px;
 	border-radius: 12px;
+	padding: 8px 25px 8px 8px;
 	border: 1px solid #2727271A;
 	&:last-child {
 		margin-bottom: 0;
 	}
 	a {
 		gap: 20px;
+		@media #{$xxs} {
+			flex-wrap: wrap;
+		}
 	}
 	.item-icon {
 		width: 72px;
 		height: 72px;
 		border-radius: 10px;
 		background-color: var(--mx-prime-c2);
+		i {
+			display: block;
+		}
+	}
+	.item-inner {
+		gap: 10px 20px;
+		@media #{$xxs} {
+			flex-wrap: wrap;
+		}
 	}
 	.item-text {
 		color: #000000;
+	}
+	i {
+		color: #000000;
+		font-size: 20px;
+		@media #{$xxs} {
+			display: none;
+		}
+	}
+}
+.mx-appoint-form {
+	&:is(.ver_2) {
+		width: 100%;
+		max-width: 676px;
+		background-color: var(--mx-prime-c2);
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			max-width: 100%;
+		}
+		.form-title {
+			h3 {
+				color: #fff;
+				font-size: 28px;
+			}
+			p {
+				color: #fff;
+				margin: 0 auto;
+				max-width: 450px;
+			}
+		}
+		.item-field input,
+		.item-field select, 
+		.item-field textarea {
+			border: 1px solid #EAECF00F;
+			background-color:  #F5FAFE05;
+			color: rgba(255, 255, 255, .8);
+			backdrop-filter: blur(67.08099365234375px);
+			&::placeholder {
+				color: rgba(255, 255, 255, .8);
+			}
+		}
+		.item-field i {
+			z-index: 1;
+			color: rgba(255, 255, 255, .8);
+		}
+		button {
+			border-radius: 12px;
+			background-color: #fff;
+			color: var(--mx-prime-c2);
+		}
 	}
 }

@@ -6,6 +6,10 @@
 }
 .mx-testi2-top {
 	gap: 12px;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 .mx-testi2-item1 {
 	width: 100%;
@@ -114,6 +118,8 @@
 	}
 }
 .mx-testi2-item4 {
+	margin: 0 auto;
+	max-width: 408px;
 	.inner-item {
 		padding: 12px;
 		border-radius: 24px;

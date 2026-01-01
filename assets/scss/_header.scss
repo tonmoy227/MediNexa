@@ -326,7 +326,7 @@
 				}
 			}
 			.ct-btn {
-				@media #{$xxs} {
+				@media #{$xs,$xxs} {
 					display: none !important;
 				} 
 				a {
@@ -389,12 +389,172 @@
 				}
 			}
 		}
+		.mx-mobile-menu-btn { 
+			button {
+				span {
+					background-color: #fff;
+				}
+			}
+		}
 	}
 }
 
 .mx-main-navi {
 	display: flex;
 	justify-content: center;
+	@media #{$md,$sm,$xs,$xxs} {
+		display: none !important;
+	}
+	.dropdown {
+		position: relative;
+		span {
+			position: relative;
+			&:after {
+				top: 7px;
+				z-index: 2;
+				right: -17px;
+				content: "\2b";
+				font-size: 12px;
+				font-weight: 700;
+				font-weight: 900;
+				position: absolute;
+				color: #000;
+				font-family: 'Font Awesome 5 free';
+				transition: 0.3s all ease-in-out;
+			}
+		}
+		&:hover {
+			.dropdown-menu {
+				visibility: visible;
+				opacity: 1;
+				clip: inherit;
+				-webkit-transform: scaleY(1);
+				-khtml-transform: scaleY(1);
+				-moz-transform: scaleY(1);
+				-ms-transform: scaleY(1);
+				-o-transform: scaleY(1);
+				transform: scaleY(1);
+			}
+		}
+	}
+	.dropdown-menu {
+		left: 0;
+		bottom: 57px;
+		z-index: 100;
+		margin: 0px;
+		padding: 4px 4px 15px;
+		height: auto;
+		min-width: 270px;
+		display: block;
+		border: none;
+		border-radius: 0;
+		position: absolute;
+		opacity: 0;
+		background: #fff;
+		text-align: left;
+		border-radius: 10px;
+		transform: scaleY(0);
+		transform-origin: bottom;
+		transition: all .3s ease-in-out;
+		box-shadow: -8px 8px 24px 0px rgba(0, 0, 0, 0.08);
+		.dropdown {
+			padding-right: 0;
+			padding-left: 0;
+			&:after {
+				display: none;
+			}
+		}
+		.dropdown-menu {
+			top: 0px !important;
+			left: 100%;
+			transform-origin: top;
+			display: inline-table;
+			transform: scaleY(0) !important;
+		}
+		li {
+			display: block;
+			margin: 5px 0px !important;
+			transition: .3s all ease-in-out;
+			border-left: none !important;
+			&:last-child {
+				border-bottom: none;
+				margin-bottom: 0 !important;
+				a {
+					padding-bottom: 0 !important;
+					border-bottom: none !important;
+				}
+			}
+			&:before {
+				display: none;
+			}
+			&:after {
+				color: #fff;
+				right: 15px;
+				transform: rotate(-90deg);
+				transition: .3s all ease-in-out;
+			}
+			&.dropdown:hover {
+				&:after {
+					transform: rotate(0);
+				}
+				.dropdown-menu {
+					top: 0; 
+					transform: scaleY(1) !important;
+				}
+			}
+			&.dropdown {
+				&:before {
+					color: #fff;
+					top: 10px;
+					right: 15px;
+				}
+			}
+			&:hover {
+				&:before {
+					color: #fff !important;
+				}
+			}
+		}
+		a {
+			width: 100%;
+			line-height: 1;
+			color: #000 !important;
+			position: relative;
+			border-radius: 0 !important;
+			border-bottom: 1px solid #d7d7d7;
+			display: inline-block !important;
+			padding: 12px  0px 12px 18px !important;
+			font-weight: 400 !important;
+			font-size: 16px !important;
+			border: none !important;
+			background-color: transparent !important;
+			span {
+				&:after {
+					display: none;
+				}
+			}
+			&:before {
+				display: none;
+			}
+			&:after {
+				display: none;
+			}
+			&:hover,
+			&.active {
+				color:  var(--mx-prime-c) !important;
+				padding-left: 30px !important;
+				&:after {
+					width: 100%;
+				}
+				&:before {
+					opacity: 1;
+					width: 5px !important;
+					visibility: visible;
+					transform: scale(1.0) !important;
+				}
+			}
+		}
+	}
 	.navbar-nav {
 		flex-direction: row;
 		justify-content: center;
@@ -406,6 +566,12 @@
 		background-blend-mode: overlay; 
 		backdrop-filter: blur(95.7281494140625px);
 		background: linear-gradient(106.97deg, rgba(255, 255, 255, 0.2) 5.84%, rgba(255, 255, 255, 0.05) 70.7%);
+		@media #{$xxxl} {
+			padding: 30px 15px;
+		}
+		@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+			backdrop-filter: none;
+		}
 		li {
 			margin: 0px 8px;
 			text-transform: uppercase;
@@ -416,6 +582,13 @@
 				border-radius: 12px;
 				background-color: #fff;
 				padding: 15px 24px 11px;
+				@media #{$xxxl} {
+					padding: 15px 15px 11px;
+				}
+				&:hover {
+					color: #fff;
+					background-color: var(--mx-prime-c);
+				}
 			}
 		}
 	}

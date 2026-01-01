@@ -3,6 +3,9 @@
 	margin: 0px 32px;
 	margin-top: -150px;
 	position: relative;
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		margin: 0px 10px;
+	}
 	&:before {
 		top: 0;
 		left: 0;
@@ -14,16 +17,24 @@
 		background-color: #fff;
 		clip-path: polygon( 0% 4.152%,0% 4.152%,0.034% 3.479%,0.132% 2.84%,0.289% 2.244%,0.499% 1.7%,0.757% 1.216%,1.059% 0.801%,1.398% 0.463%,1.769% 0.212%,2.167% 0.054%,2.586% 0%,22.091% 0%,22.091% 0%,22.51% 0.054%,22.908% 0.212%,23.279% 0.463%,23.618% 0.801%,23.919% 1.216%,24.178% 1.7%,24.388% 2.244%,24.545% 2.84%,24.643% 3.479%,24.677% 4.152%,24.677% 9.343%,24.677% 9.343%,24.711% 10.016%,24.809% 10.655%,24.965% 11.251%,25.176% 11.795%,25.434% 12.279%,25.736% 12.694%,26.074% 13.031%,26.445% 13.283%,26.843% 13.44%,27.263% 13.495%,46.848% 13.495%,72.737% 13.495%,72.737% 13.495%,73.157% 13.44%,73.555% 13.283%,73.926% 13.031%,74.264% 12.694%,74.566% 12.279%,74.824% 11.795%,75.035% 11.251%,75.191% 10.655%,75.289% 10.016%,75.323% 9.343%,75.323% 4.152%,75.323% 4.152%,75.357% 3.479%,75.455% 2.84%,75.612% 2.244%,75.822% 1.7%,76.081% 1.216%,76.382% 0.801%,76.721% 0.463%,77.092% 0.212%,77.49% 0.054%,77.909% 0%,97.414% 0%,97.414% 0%,97.833% 0.054%,98.231% 0.212%,98.602% 0.463%,98.941% 0.801%,99.243% 1.216%,99.501% 1.7%,99.711% 2.244%,99.868% 2.84%,99.966% 3.479%,100% 4.152%,100% 95.848%,100% 95.848%,99.966% 96.521%,99.868% 97.16%,99.711% 97.756%,99.501% 98.3%,99.243% 98.784%,98.941% 99.199%,98.602% 99.537%,98.231% 99.788%,97.833% 99.946%,97.414% 100%,2.586% 100%,2.586% 100%,2.167% 99.946%,1.769% 99.788%,1.398% 99.537%,1.059% 99.199%,0.757% 98.784%,0.499% 98.3%,0.289% 97.756%,0.132% 97.16%,0.034% 96.521%,0% 95.848%,0% 4.152% );
 	}
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		&:before {
+			clip-path: none;
+			border-radius: 40px;
+		}
+	}
 }
 
 
 .mx-ser2-sec {
+
 	.mx-sec-title {
 		margin: 0 auto;
 		max-width: 770px;
 	}
 	.mx-ser2-shape1 {
 		right: 0;
+		z-index: -1;
 		top: -150px;
 		opacity: .5;
 	}
@@ -31,6 +42,7 @@
 		left: 0;
 		top: -150px;
 		opacity: .5;
+		z-index: -1;
 	}
 }
 
@@ -38,12 +50,14 @@
 	padding: 40px;
 	border-radius: 20px;
 	border: 1px solid #0000001F;
+	transition: all 300ms ease-in-out;
 	.item-icon {
 		width: 72px;
 		height: 72px;
 		margin-bottom: 58px;
 		border-radius: 12px;
 		background-color: var(--mx-prime-c);
+		transition: all 300ms ease-in-out;
 	}
 	.item-text {
 		h3 {
@@ -53,6 +67,8 @@
 		}
 		p {
 			padding-bottom: 45px;
+			clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+			transition: all 500ms ease-in-out;
 		}
 		.read_more {
 			width: 100%;
@@ -67,7 +83,30 @@
 				border-radius: 8px;
 				align-items: center;
 				justify-content: center;
+				transition: all 300ms ease-in-out;
 				background-color: var(--mx-prime-c2);
+			}
+			&:hover {
+				color: #fff;
+				border: 1px solid var(--mx-prime-c2);
+				background-color: var(--mx-prime-c2);
+				i {
+					background-color: #fff;
+					color: var(--mx-prime-c2);
+				}
+			}
+		}
+	}
+	&:hover {
+		border-style: solid;
+		border-color: #09243C;
+		border-width: 1px 1px 4px 1px;
+		.item-icon {
+			background-color: var(--mx-prime-c2);
+		}
+		.item-text {
+			p {
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 			}
 		}
 	}
