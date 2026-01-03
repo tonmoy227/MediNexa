@@ -17,6 +17,9 @@
 	@media #{$xs,$xxs} {
 		padding: 15px;
 	}
+	&:is(.ver_2) {
+		margin-top: -90px;
+	}
 }
 
 .mx-app-cta-item {

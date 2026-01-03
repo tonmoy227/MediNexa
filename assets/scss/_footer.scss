@@ -318,6 +318,7 @@
 		margin-bottom: 30px;
 		border-radius: 100%;
 		background-color: #1B243C;
+		transition: all 400ms ease-in-out;
 	}
 	.item-text {
 		h3 {
@@ -329,6 +330,12 @@
 		p {
 			font-size: 17px;
 			color: rgba(255, 255, 255, .8);
+		}
+	}
+	&:hover {
+		.item-icon {
+			color: var(--mx-prime-c);
+			background-color: #fff;
 		}
 	}
 }
@@ -451,8 +458,8 @@
 			color: rgba(255, 255, 255, .8);
 			a {
 				&:hover {
+					color: #fff;
 					letter-spacing: 1px;
-					color: var(--mx-prime-c);
 				}
 			}
 		}

@@ -360,24 +360,24 @@ if ($('.mx-testi1-slider').length > 0 ) {
 	});
 };
 
-
-var MXItem1 = gsap.timeline({
-	scrollTrigger: {
-		trigger: ".mx-app-cta-item",
-		start: "top 70%",
-		toggleActions: "play reverse play reverse",
-		markers: false,
-	},
-})
-MXItem1
-.from(".mx-app-cta-item .cta-bottom", {
-	yPercent: 100,
-	opacity: 0,
-	ease: "power1.out",
-	duration: 1, 
-	stagger: -.2,
-})
-
+if (window.matchMedia("(min-width: 1200px)").matches) {
+	var MXItem1 = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".mx-app-cta-item",
+			start: "top 70%",
+			toggleActions: "play reverse play reverse",
+			markers: false,
+		},
+	})
+	MXItem1
+	.from(".mx-app-cta-item .cta-bottom", {
+		yPercent: 100,
+		opacity: 0,
+		ease: "power1.out",
+		duration: 1, 
+		stagger: -.2,
+	})
+}
 var MXItem2 = gsap.timeline({
 	scrollTrigger: {
 		trigger: ".mx-workp-content",
@@ -618,6 +618,72 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 }
 
 
+$('.mx-line-icon a').on("click", function(){
+	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		var target = $(this.hash);
+		target = target.length ? target : $('[name="DCSext.Level"' + this.hash.slice(1) +']');
+		if (target.length) {
+			$('html, body').animate({
+				scrollTop: target.offset().top -150
+			}, 1000);
+			return false;
+		}
+	}
+});
 
+var quick_view = new Swiper(".mx-ser3-slide-thumb", {
+	spaceBetween: 12,
+	slidesPerView: 5,
+	speed: 1000,
+	direction: 'vertical',
+	autoplay: {
+		enabled: true,
+		delay: 5000
+	},
+	breakpoints: {  
+		'1400': {
+			slidesPerView: 5,
+		},
+		'1200': {
+			slidesPerView: 5,
+		},
+		'992': {
+			slidesPerView: 5,
+		},
+		'480': {
+			slidesPerView: 5,
+		},
+		'0': {
+			slidesPerView: 5,
+		},
+	},
+});
+
+var swiper2 = new Swiper(".mx-ser3-slider-item", {
+	spaceBetween: 0,
+	speed: 1000,
+	autoplay: {
+		enabled: true,
+		delay: 5000
+	},
+	pagination: {
+		el: ".mx-ser-pagi",
+		type: 'fraction',
+		formatFractionCurrent: function (number) {
+			return number < 10 ? '0'+ number: number;
+		},
+		formatFractionTotal: function (number) {
+			return number < 10 ? '0'+ number : number;
+		}
+	},
+	scrollbar: {
+		el: '.mx-ser-scrollbar',
+		draggable: false,
+	},
+	slidesPerView: 1,
+	thumbs: {
+		swiper: quick_view,
+	},
+});
 
 })(jQuery);
