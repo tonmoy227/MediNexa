@@ -1,0 +1,135 @@
+.mx-faq3-sec {
+	margin: 0px 12px;
+	.mx-sec-title {
+		margin: 0 auto;
+		max-width: 950px;
+		p {
+			margin: 0 auto;
+			max-width: 720px;
+		}
+	}
+}
+.mx-faq3-wrap {
+	z-index: 1;
+	&:before {
+		top: 0;
+		left: 0;
+		width: 100%;
+		content: '';
+		z-index: -1;
+		height: 100%;
+		position: absolute;
+		border-radius: 40px;
+		background-color: #fff;
+	}
+	.mx-faq3-shape {
+		top: -50%;
+		left: -33%;
+		z-index: -1;
+	}
+}
+
+.mx-faq3-content {
+	padding: 24px;
+	margin: 0 auto;
+	margin-top: 50px;
+	max-width: 1032px;
+	border-radius: 40px;
+	background-color: #F6F7F9;
+	.accordion-item,
+	.accordion-button {
+		background-color: transparent;
+		transition: all 200ms ease-in-out;
+	}
+	.accordion-item {
+		border: none;
+		position: relative;
+		padding: 28px 25px;
+		margin-bottom: 12px;
+		border-radius: 16px;
+		background-color: #fff;
+		transition: all 200ms ease-in-out;
+		&:last-child {
+			border-bottom: none;
+		}
+		@media #{$xxs} { 
+			padding: 23px 15px 23px 15px;
+		}
+	}
+	.accordion-button {
+		padding: 0;
+		border: none;
+		font-size: 20px;
+		font-weight: 400;
+		margin: 0 auto;
+		position: relative;
+		@media #{$md,$sm,$xs,$xxs} {
+			padding: 20px 15px;
+		}
+		span {
+			max-width: 85%;
+			display: inline-block;
+			b {
+				font-weight: 400;
+			}
+		}
+	}
+
+	.accordion-button:focus {
+		box-shadow: none;
+	}
+	.accordion-body {
+		padding: 0;
+		color: #535862;
+		font-size: 18px;
+		transition: all 500ms ease-in-out;
+		.bi-faq-text {
+			max-width: 775px;
+			padding: 24px 30px 0px 30px;
+			@media #{$xxs} {
+				padding-left: 0;
+			}
+		}
+		@media #{$md,$sm,$xs,$xxs} {
+			padding: 20px 15px;
+		}
+	}
+	.accordion-button::after {
+		top: -8px;
+		right: 00px;
+		opacity: .7;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		font-size: 16px;
+		content: '\2b';
+		font-weight: 900;
+		position: absolute;
+		border-radius: 100%;
+		align-items: center;
+		background-image: none;
+		justify-content: center;
+		color: var(--mx-prime-c2);
+		font-family: 'Font Awesome 6 free';
+		transition: all 200ms ease;
+		border: 1px solid #EAECF0;
+		border-radius: 100%;
+		@media #{$xxs} {
+			right: 0px;
+		}
+	}
+	.accordion-button:not(.collapsed) { 
+		color: #000000;
+		box-shadow: none;
+		span {
+			color: #000000;
+		}
+		&:after {
+			opacity: 1;
+			color: #FFFFFF;
+			content: '\f068';
+			border: 1px solid var(--mx-prime-c2);
+			background-color: var(--mx-prime-c2);
+		}
+	}
+}

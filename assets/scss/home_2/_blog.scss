@@ -1,3 +1,23 @@
+.mx-blog2-sec {
+	&:is(.ver_2) {
+		margin: 0px 12px;
+	}
+	.mx-blog2-wrap {
+		z-index: 1;
+		&:before {
+			top: 0;
+			left: 0;
+			width: 100%;
+			content: '';
+			z-index: -1;
+			height: 100%;
+			position: absolute;
+			border-radius: 40px;
+			background-color: #fff;
+		}
+	}
+}
+
 .mx-blog2-content {
 	gap: 30px;
 	display: grid;

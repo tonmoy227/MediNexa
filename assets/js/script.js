@@ -569,6 +569,52 @@ if ($('.mx-case1-slider').length > 0 ) {
 };
 
 
+if ($('.mx-cs3-slider-area').length > 0 ) {
+	var slider = new Swiper('.mx-cs3-slider-area', {
+		slidesPerView: 1,
+		loop: true,
+		spaceBetween: 0,
+		speed: 1000,
+		autoplay: {
+			enabled: false,
+			delay: 6000
+		},
+		navigation: {
+			nextEl: ".cs3-next",
+			prevEl: ".cs3-prev",
+		},
+		pagination: {
+			el: ".mx-cs3-pagi",
+			type: 'fraction',
+			formatFractionCurrent: function (number) {
+				return number < 10 ? '0'+ number: number;
+			},
+			formatFractionTotal: function (number) {
+				return number < 10 ? '0'+ number : number;
+			}
+		},
+	});
+};
+
+
+if ($('.mx-testi3-slider').length > 0 ) {
+	var slider = new Swiper('.mx-testi3-slider', {
+		slidesPerView: 1,
+		loop: true,
+		spaceBetween: 0,
+		speed: 1000,
+		autoplay: {
+			enabled: false,
+			delay: 6000
+		},
+		navigation: {
+			nextEl: ".testi3-next",
+			prevEl: ".testi3-prev",
+		},
+	});
+};
+
+
 if ($('.scene').length > 0 ) {
 	$('.scene').parallax({
 		scalarX: 10.0,

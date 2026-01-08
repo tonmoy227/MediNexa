@@ -1,0 +1,132 @@
+.mx-testi3-img-wrap {
+	width: 100%;
+	height: 575px;
+	max-width: 600px;
+	@media #{$xxs} {
+		height: 500px;
+	}
+	.item-img1 {
+		width: 360px;
+		height: 360px;
+		overflow: hidden;
+		border-radius: 100%;
+		border: 6px solid #FFFFFF;
+	}
+	.item-img2 {
+		left: 0;
+		bottom: 86px;
+		width: 240px;
+		height: 240px;
+		overflow: hidden;
+		position: absolute;
+		border-radius: 100%;
+		border: 6px solid #FFFFFF;
+		@media #{$xxs} {
+			display: none;
+		}
+	}
+	.item-img3 {
+		bottom: 0;
+		right: 80px;
+		width: 200px;
+		height: 200px;
+		overflow: hidden;
+		position: absolute;
+		border-radius: 100%;
+		border: 6px solid #FFFFFF;
+		@media #{$xxs} {
+			display: none;
+		}
+	}
+	.item-exp {
+		top: 64%;
+		left: 30%;
+		width: 240px;
+		height: 240px;
+		padding-top: 70px;
+		position: absolute;
+		border-radius: 100%;
+		border: 6px solid #FFFFFF;
+		background-color: var(--mx-prime-c);
+		transform: translateY(-50%);
+		@media #{$xxs} {
+			left: 0;
+			right: 0;
+			top: auto;
+			bottom: -20%;
+			margin: 0 auto;
+		}
+		h3 {
+			color: #fff;
+			font-size: 48px;
+			font-weight: 700;
+		}
+		p {
+			color: #FFFFFF;
+		}
+	}
+}
+
+.mx-testi3-slider-wrap {
+	width: 100%;
+	max-width: 660px;
+	@media #{$xl} {
+		max-width: 524px;
+	}
+	@media #{$lg} {
+		max-width: 400px;
+	}
+}
+.mx-testi3-content {
+	gap: 25px;
+	max-width: 1455px;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
+}
+.mx-testi3-item {
+	h3 {
+		font-size: 32px;
+		font-weight: 600;
+		letter-spacing: -1px;
+		padding-bottom: 22px;
+	}
+	p {
+		color: #272727;
+		max-width: 527px;
+	}
+	.item-author {
+		h4 {
+			font-size: 20px;
+			font-weight: 600;
+			padding-bottom: 5px;
+		}
+	}
+}
+
+.mx-testi3-nav {
+	display: inline-block;
+	background-color: #fff;
+	border-radius: 120px;
+	border: 1px solid #EAECF0;
+	.nav-wrap {
+		padding: 6px;
+		display: flex;
+		.testi3-prev,
+		.testi3-next {
+			color: #000;
+			width: 48px;
+			height: 48px;
+			display: flex;
+			align-items: center;
+			border-radius: 100%;
+			justify-content: center;
+			transition: all 500ms ease-in-out;
+			&:hover {
+				color: #fff;
+				background-color: var(--mx-prime-c2);
+			}
+		}
+	}
+}
