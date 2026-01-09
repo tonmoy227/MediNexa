@@ -95,6 +95,17 @@
 	}
 	.btn-wrap {
 		gap: 12px;
+		.mx-btn1 span:before {
+			background-color: var(--mx-prime-c2);
+		}
+		.mx-btn2 {
+			a {
+				&:hover {
+					color: #fff;
+					background-color: var(--mx-prime-c2);
+				}
+			}
+		}
 	}
 }
 

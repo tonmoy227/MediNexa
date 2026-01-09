@@ -77,6 +77,27 @@ Last change:    00/00/00
 			jQuery(this).parent().find("> .dropdown-menu").toggleClass("active"),
 			jQuery(this).parent().find("> .dropdown-menu").slideToggle());
 	});
+
+	$('.search_btn_toggle').on('click', function() {
+		$('.overlay, .search_box_active').addClass('active');
+	});
+	$('.overlay, .search_box_close').on('click', function() {
+		$('.search_box_active').removeClass('active');
+		$('.overlay').removeClass('active');
+	});
+	jQuery(document).ready(function (o) {
+		0 < o(".navSidebar-button").length &&
+		o(".navSidebar-button").on("click", function (e) {
+			e.preventDefault(), e.stopPropagation(), o(".info-group").addClass("isActive");
+		}),
+		0 < o(".close-side-widget").length &&
+		o(".close-side-widget").on("click", function (e) {
+			e.preventDefault(), o(".info-group").removeClass("isActive");
+		}),
+		o(".xs-sidebar-widget").on("click", function (e) {
+			e.stopPropagation();
+		})
+	});
 	// Background Image
 	$('[data-background]').each(function() {
 		$(this).css('background-image', 'url('+ $(this).attr('data-background') + ')');
@@ -169,6 +190,13 @@ Last change:    00/00/00
 						if( $(el).hasClass('hero_title_1') ){
 							gsap.set(el.split.chars, {
 								x: 100,
+								scaleX: 0,
+								opacity: 0,
+							});
+						}
+						if( $(el).hasClass('hero_title_2') ){
+							gsap.set(el.split.chars, {
+								y: 100,
 								scaleX: 0,
 								opacity: 0,
 							});
@@ -268,6 +296,16 @@ Last change:    00/00/00
 				.from(".mx-hero2-desc", {   x: 100, opacity: 0,  duration: 1,  ease: "power2.inOut" },"< ")
 				.from(".mx-hero2-video", {   x: -100, opacity: 0,  duration: 1,  ease: "power2.inOut" },"<")
 
+
+
+				const MXHero3 = gsap.timeline();
+				MXHero3
+				.from(".mx-hero3-text .hero-slug", {   x: 150, opacity: 0,  duration: 1.5,  ease: "power2.inOut" })
+				.from(".mx-hero3-img-wrap", {   yPercent: 100, opacity: 0,  duration: 1.5,  ease: "power2.inOut" },"<")
+				.from(".mx-hero3-text .hr_desc", {   x: 150, opacity: 0,  duration: 1.5,  ease: "power2.inOut" },"< = .2")
+				.from(".mx-hero3-text .btn-wrap", {   x: 150, opacity: 0,  duration: 1.5,  ease: "power2.inOut" },"< = .2")
+				.from(".mx-hero3-text .mx-hero-client .cl-img li", {   scale: 0, rotate: 180, opacity: 0,  duration: 1.5,  ease: "power2.inOut" },"< = .2")
+				.from(".mx-hero3-text .mx-hero-client .cl-rate", {   x: 150, opacity: 0,  duration: 1.5,  ease: "power2.inOut" },"< = .2")
 
 			}, 700);
 })		
@@ -574,6 +612,7 @@ if ($('.mx-cs3-slider-area').length > 0 ) {
 		slidesPerView: 1,
 		loop: true,
 		spaceBetween: 0,
+		effect: "fade",
 		speed: 1000,
 		autoplay: {
 			enabled: false,
@@ -603,6 +642,7 @@ if ($('.mx-testi3-slider').length > 0 ) {
 		loop: true,
 		spaceBetween: 0,
 		speed: 1000,
+		effect: "fade",
 		autoplay: {
 			enabled: false,
 			delay: 6000
@@ -708,6 +748,7 @@ var quick_view = new Swiper(".mx-ser3-slide-thumb", {
 var swiper2 = new Swiper(".mx-ser3-slider-item", {
 	spaceBetween: 0,
 	speed: 1000,
+	effect: "fade",
 	autoplay: {
 		enabled: true,
 		delay: 5000
@@ -731,5 +772,55 @@ var swiper2 = new Swiper(".mx-ser3-slider-item", {
 		swiper: quick_view,
 	},
 });
+
+
+
+
+
+
+$('.mx_item_active').on('mouseover', function () {
+	var $group = $(this).closest('[data-nx-group]');
+	$group.find('.mx_item_active').removeClass('active');
+	$(this).addClass('active');
+});
+
+if($('.mx-split-1').length) {
+	var txtSplit = $('.mx-split-1');
+	if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
+		el.split = new SplitText(el, { 
+			type: "lines",
+			linesClass: "split-line"
+		});
+	});
+}
+
+
+
+document.querySelectorAll(".mx-cta3-content").forEach((projectItem) => {
+	const textEl = projectItem.querySelector(".mx-cta3-item");
+	projectItem.addEventListener("mousemove", (e) => {
+		const rect = projectItem.getBoundingClientRect();
+		const x = e.clientX - rect.left;
+		const y = e.clientY - rect.top;
+		const moveX = (x / rect.width - 0.05) * 50; 
+		const moveY = (y / rect.height - 0.5) * 50;
+
+		gsap.to(textEl, {
+			x: moveX,
+			y: moveY,
+			duration: 4,
+			ease: "power2.out"
+		});
+	});
+	projectItem.addEventListener("mouseleave", () => {
+		gsap.to(textEl, {
+			x: 0,
+			y: 0,
+			duration: 5,
+			ease: "power3.out"
+		});
+	});
+});
+
 
 })(jQuery);

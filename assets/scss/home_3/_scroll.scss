@@ -19,6 +19,16 @@
 		height: 86px;
 		overflow: hidden;
 		border-radius: 120px;
+		img {
+			transition: all 300ms ease-in-out;
+		}
+	}
+	&:hover {
+		.item-img {
+			img {
+				transform: scale(1.2);
+			}
+		}
 	}
 }
 

@@ -351,6 +351,9 @@ a {
 	&:is(.ver_3) {
 		span {
 			background-color: var(--mx-prime-c);
+			&:before {
+				background-color: var(--mx-prime-c2);
+			}
 		}
 		i {
 			border: 3px solid #C5C9EE;

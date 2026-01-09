@@ -68,10 +68,16 @@
 }
 
 .mx-wc3-text-wrap {
+	z-index: 1;
 	padding: 60px;
 	max-width: 768px;
 	border-radius: 32px;
 	background-color: var(--mx-prime-c2);
+	.mx-wc3-shape {
+		top: 10%;
+		right: -30%;
+		z-index: -1;
+	}
 	@media #{$xl} {
 		padding: 60px 30px;
 	}
@@ -152,6 +158,7 @@
 		align-items: center;
 		justify-content: center;
 		background-color: #3A5063;
+		transition: all 400ms ease-in-out;
 	}
 	.item-text {
 		max-width: 572px;
@@ -170,6 +177,12 @@
 		p {
 			color: #EAECF0;
 			font-size: 16px;
+		}
+	}
+	&:is(.active) {
+		span {
+			background-color: #fff;
+			color: var(--mx-prime-c2);
 		}
 	}
 }
