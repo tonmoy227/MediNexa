@@ -60,6 +60,9 @@ body::-webkit-scrollbar-thumb {
 	font-size: 18px;
 	background-color: #fcf7f3;
 	font-family: var(--mx-plus);
+	.container {
+		max-width: 1526px;
+	}
 }
 .ul-li ul {
 	margin: 0;
