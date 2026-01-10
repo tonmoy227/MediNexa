@@ -115,6 +115,11 @@
 				background-color: #fff;
 				border: 3px solid var(--mx-prime-c2);
 			}
+			&:hover {
+				span {
+					color: #fff ;
+				}
+			}
 		}
 	}
 }

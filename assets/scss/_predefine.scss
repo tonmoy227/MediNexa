@@ -56,6 +56,11 @@ body::-webkit-scrollbar-thumb {
 	background-size: 200%, 1px;
 	background-color: var(--mx-prime-c);
 }
+.home-4 {
+	font-size: 18px;
+	background-color: #fcf7f3;
+	font-family: var(--mx-plus);
+}
 .ul-li ul {
 	margin: 0;
 	padding: 0;
@@ -79,11 +84,23 @@ body::-webkit-scrollbar-thumb {
 .headline h4,
 .headline h5,
 .headline h6 {
+	color: #111111;
+	margin-bottom: 0;
+	font-weight: 400;
+	line-height: 1.25;
+	font-family: var(--mx-heading);
+}
+.headline-2 h1,
+.headline-2 h2,
+.headline-2 h3,
+.headline-2 h4,
+.headline-2 h5,
+.headline-2 h6 {
 	margin-bottom: 0;
 	font-weight: 400;
 	line-height: 1.25;
 	color: var(--mx-title-color);
-	font-family: var(--mx-heading);
+	font-family: var(--mx-unbound);
 }
 @keyframes hithere {
 	30% {

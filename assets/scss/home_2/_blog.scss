@@ -61,7 +61,7 @@
 					height: 1px;
 					content: '';
 					position: absolute;
-					background-color: #000;
+					background-color: var(--mx-prime-c);
 					transition: all 500ms ease-in-out;
 				}
 			}
@@ -71,6 +71,7 @@
 				transition: all 100ms ease-in-out;
 			}
 			&:hover {
+				color: var(--mx-prime-c);
 				span {
 					letter-spacing: 1px;
 					&:before {

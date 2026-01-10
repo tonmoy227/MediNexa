@@ -302,6 +302,7 @@ Last change:    00/00/00
 				MXHero3
 				.from(".mx-hero3-text .hero-slug", {   x: 150, opacity: 0,  duration: 1.5,  ease: "power2.inOut" })
 				.from(".mx-hero3-img-wrap", {   yPercent: 100, opacity: 0,  duration: 1.5,  ease: "power2.inOut" },"<")
+				.from(".mx-hr3-text", {   yPercent: -100, opacity: 0,  duration: 1.5,  ease: "power2.inOut" },"<")
 				.from(".mx-hero3-text .hr_desc", {   x: 150, opacity: 0,  duration: 1.5,  ease: "power2.inOut" },"< = .2")
 				.from(".mx-hero3-text .btn-wrap", {   x: 150, opacity: 0,  duration: 1.5,  ease: "power2.inOut" },"< = .2")
 				.from(".mx-hero3-text .mx-hero-client .cl-img li", {   scale: 0, rotate: 180, opacity: 0,  duration: 1.5,  ease: "power2.inOut" },"< = .2")

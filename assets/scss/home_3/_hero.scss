@@ -20,6 +20,17 @@
 		padding-top: 180px;
 	}
 }
+.mx-hr3-text {
+	top: 20%;
+	right: 0;
+	b {
+		font-size: 160px;
+		font-weight: 700;
+		background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.25) 19.69%, #FFFFFF 50.03%, rgba(255, 255, 255, 0.25) 80.02%, rgba(255, 255, 255, 0) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent; 
+	}
+}
 .mx-hero3-text {
 	z-index: 2;
 	max-width: 768px;

@@ -18,8 +18,8 @@
 			height: 100%;
 			max-width: 675px;
 			position: absolute;
-			backdrop-filter: blur(6px);
-			background: linear-gradient(90deg, #F6F7F9 0%, rgba(246, 247, 249, 0.498845) 50.12%, rgba(246, 247, 249, 0) 100%);
+			background-repeat: no-repeat;
+			background-image: url(../img/shape/shape36.png);
 			@media #{$md,$sm,$xs,$xxs} {
 				display: none;
 			}

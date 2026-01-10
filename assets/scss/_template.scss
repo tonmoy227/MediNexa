@@ -2,13 +2,17 @@
 Font load
 ===========*/
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Unbounded:wght@200..900&display=swap');
 :root {
 	--mx-body-color: rgba(39, 39, 39, .8);
 	--mx-title-color: #000000;
 	--mx-heading: "Sora", sans-serif;
 	--mx-body-font: "Sora", sans-serif;
+	--mx-unbound: "Unbounded", sans-serif; 
+	--mx-plus: "Plus Jakarta Sans", sans-serif;
 	--mx-prime-c: #3368C6;
 	--mx-prime-c2: #09243C;
+	--mx-prime-c3: #40b08e;
 	--cube-1: cubic-bezier(0.23, 1, 0.32, 1);
 	--cube-2: all .25s cubic-bezier(.645,.045,.355,1);
 	--cube-3: cubic-bezier(0.25, 1, 0.5, 1);

@@ -19,6 +19,20 @@
 	}
 	&:is(.ver_2) {
 		margin-top: -90px;
+		.mx-app-cta-item {
+			&:nth-child(3) {
+				.cta-top,
+				.cta-bottom {
+					background-color: #FBE285;
+				}
+			}
+			&:nth-child(2) {
+				.cta-top,
+				.cta-bottom {
+					background-color: #F1F2F2;
+				}
+			}
+		}
 	}
 }
 
