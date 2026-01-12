@@ -1,0 +1,155 @@
+.mx-ser4-content {
+	width: 100% ;
+	margin: 0 auto;
+	max-width: 1800px;
+}
+
+.mx-ser4-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media #{$sm,$xs,$xxs} {
+		grid-template-columns: 1fr;
+	}
+}
+
+
+.mx-ser4-title {
+	margin-bottom: 35px;
+	span {
+		color: #000000;
+		font-size: 20px;
+		font-weight: 600;
+	}
+}
+
+.mx-ser4-item {
+	padding: 35px;
+	position: relative;
+	border-top: 1px solid #dbdbdb;
+	&:before {
+		top: 0;
+		right: 0;
+		width: 1px;
+		height: 90%;
+		content: '';
+		position: absolute;
+		background-color: #dbdbdb;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			height: 100%;
+		}
+	}
+	&:last-child {
+		&:before {
+			display: none;
+		}
+	}
+	.front-part {
+		gap: 30px;
+		@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+			flex-wrap: wrap;
+		}
+		.item-icon {
+			width: 110px;
+			height: 110px;
+			border-radius: 10px;
+			background-color: #eeeeee;
+		}
+		.item-text {
+			max-width: 250px;
+			h3 {
+				font-size: 23px;
+				font-weight: 600;
+				line-height: 1.4;
+				padding-bottom: 18px;
+			}
+			ul {
+				margin-bottom: 28px;
+			}
+			li {
+				color: #09243c;
+				margin-bottom: 12px;
+				i {
+					color: #111111;
+					margin-right: 8px;
+				}
+			}
+			.read_more {
+				color: #111111;
+				font-size: 18px;
+				font-weight: 600;
+				position: relative;
+				&:before {
+					left: 0;
+					width: 100%;
+					bottom: -3px ;
+					height: 1px;
+					content: '';
+					position: absolute;
+					background-color: #000000;
+				}
+			}
+		}
+	}
+	.back-part {
+		top: 35px;
+		right: 0;
+		left: 0;
+		width: 83%;
+		margin: 0 auto;
+		height: 100%;
+		position: absolute;
+		border-radius: 10px;
+		padding: 55px 50px 30px 55px;
+		transition: all 500ms ease-in-out;
+		transform: scale3d(1.0, 1.0, 1.0);
+		transform: perspective(500px) rotateX(-90deg);
+		@media #{$xxl,$xl} {
+			padding: 30px;
+		}
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+		.item-text {
+			h3 {
+				color: #fff;
+				font-size: 23px;
+				font-weight: 600;
+				padding-bottom: 18px;
+			}
+			li {
+				color: #fff;
+				font-size: 16px;
+				margin-bottom: 10px;
+				i {
+					margin-right: 8px;
+				}
+			}
+		}
+		.mx-more {
+			margin-top: 30px;
+			a {
+				color: #fff;
+				font-size: 18px;
+				font-weight: 600;
+				position: relative;
+				&:before {
+					left: 0;
+					width: 100%;
+					bottom: -3px ;
+					height: 1px;
+					content: '';
+					position: absolute;
+					background-color: #fff;
+				}
+			}
+		}
+	}
+	&:hover {
+		.back-part {
+			transform: rotateX(0) rotateY(0deg);
+		}
+	}
+}
