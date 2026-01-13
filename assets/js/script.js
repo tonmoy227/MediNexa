@@ -824,4 +824,42 @@ document.querySelectorAll(".mx-cta3-content").forEach((projectItem) => {
 });
 
 
+
+if ($('.mx-spon4-slider').length > 0 ) {
+	var slider = new Swiper('.mx-spon4-slider', {
+		spaceBetween: 100,
+		slidesPerView: 6,
+		loop: true,
+		speed: 400,
+		breakpoints: {
+			'1600': {
+				slidesPerView: 6,
+			},
+			'1200': {
+				slidesPerView: 5,
+				spaceBetween: 40,
+			},
+			'992': {
+				slidesPerView: 4,
+				spaceBetween: 20,
+			},
+			'768': {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			'576': {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			'480': {
+				slidesPerView: 1,
+				spaceBetween: 20,
+			},
+			'0': {
+				slidesPerView: 1,
+			},
+		},
+	});
+};
+
 })(jQuery);

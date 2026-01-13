@@ -1,0 +1,151 @@
+.mx-cta4-sec {
+	.mx-ct-img {
+		right: 0;
+		bottom: 0;
+		z-index: 2;
+		left: 30px;
+		margin: 0 auto;
+		max-width: 490px;
+		text-align: center;
+		@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+		.shape2 {
+			left: 0;
+			bottom: 10%;
+		}
+		.shape1 {
+			top: 60%;
+			right: -20px;
+		}
+		.shape3 {
+			top: 32%;
+			right: 25px;
+		}
+	}
+}
+
+.mx-cta4-content {
+	gap: 30px;
+	z-index: 1;
+	padding: 50px;
+	background-color: #fff;
+	@media #{$xxs} {
+		padding: 30px 25px;
+	}
+	&:before {
+		right: -15%;
+		z-index: -1;
+		width: 62%;
+		content: '';
+		bottom: 18%;
+		height: 185px;
+		position: absolute;
+		background-color: #2a495f;
+		@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
+}
+.mx-cta4-text {
+	width: 50%;
+	.mx-sec-title2 {
+		max-width: 480px;
+	}
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		width: 100%;
+	}
+}
+
+
+.mx-cta4-img1 {
+	margin-top: 40px;
+	margin-left: -260px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		margin-left: 0;
+	}
+}
+
+.mx-cta4-info {
+	gap: 12px;
+	margin-top: 25px;
+	@media #{$xxs} {
+		flex-wrap: wrap;
+	}
+	.item-icon {
+		width: 50px;
+		height: 50px;
+		border-radius: 100%;
+		border: 1px solid #000;
+	}
+	.item-text {
+		span {
+			color: #000;
+			padding-bottom: 5px;
+		}
+		h3 {
+			color: #000000;
+			font-size: 22px;
+			font-weight: 700;
+		}
+	}
+}
+.mx-cta4-list-wrapper  {
+	width: 100%;
+	max-width: 350px;
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+}
+
+.mx-cta4-list-item {
+	gap: 16px;
+	width: 100%;
+	margin-bottom: 8px;
+	padding: 25px 30px;
+	background-color: #fff;
+	border: 1px solid #f3f3f3;
+	box-shadow: -32px 0px 68px 0px rgba(233, 233, 233, 0.46);
+	.item-text {
+		color: #252150;
+		font-size: 15px;
+		font-weight: 500;
+		font-family: var(--mx-unbound);
+	}
+	@media #{$xxs} {
+		flex-wrap: wrap;
+	}
+}
+
+.mx-cta4-desc {
+	gap: 48px;
+	z-index: 1;
+	position: relative;
+	margin-right: -130px;
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+		gap: 15px;
+		margin-right: 0;
+	}
+
+	p {
+		color: #fff;
+		max-width: 385px;
+		text-align: right;
+		@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+			color: #000;
+		}
+	}
+	.item-icon {
+		width: 105px;
+		height: 105px;
+		border-radius: 100%;
+		background-color: var(--mx-prime-c3);
+		@media #{$sm,$xs,$xxs} {
+			display: none !important;
+		}
+	}
+}

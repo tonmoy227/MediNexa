@@ -1,3 +1,24 @@
+.mx-treatment-sec {
+	z-index: 1;
+	.hr4-bottom1 {
+		right: 0px;
+		bottom: 50px;
+		z-index: -2;
+		width: 1000px;
+		height: 139px;
+		background-color: #40b08e;
+		clip-path: polygon( 0.001% 44.276%,100% 100%,100% 0.002%,0.001% 44.276% );
+	}
+	.hr4-bottom2 {
+		right: 18%;
+		bottom: 40px;
+		z-index: -3;
+		width: 916px;
+		height: 121px;
+		background-color: #2a495f;
+		clip-path: polygon(100% 70.049%, 0.079% 100%, 0.409% 0.391%, 100% 70.049%);
+	}
+}
 .mx-treatment-wrapper {
 	z-index: 1;
 	clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
@@ -9,23 +30,46 @@
 		height: 100%;
 	}
 	.mx-treat-indicator {
-		top: 40%;
-		right: 0;
+		top: 21%;
+		right: 31%;
 		z-index: 2;
-		height: 70px;
+		height: 90px;
 		width: 325px;
 		position: absolute;
+		@media #{$xxl} {
+			right: 25%;
+		}
+		@media #{$xl} {
+			right: 15%;
+		}
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+		&:before {
+			top: -24px;
+			right: 23%;
+			width: 1px;
+			height: 150%;
+			content: "";
+			position: absolute;
+			transform: rotate(-62deg);
+			background-color: var(--mx-prime-c3); 
+		}
 		.item-text {
 			color: #fff;
 			font-size: 14px;
 			padding: 5px 20px;
+			border-radius: 30px;
 			border-radius: 40px;
 			border: 1px solid #fff;
 			background-color: var(--mx-prime-c3);
 		}
 		.point-area {
+			right: 0;
+			bottom: 0;
 			width: 20px;
 			height: 20px;
+			position: absolute;
 			border-radius: 100%;
 			border: 1px solid #fff;
 			background-color: var(--mx-prime-c3);
