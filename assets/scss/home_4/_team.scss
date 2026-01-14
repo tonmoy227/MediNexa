@@ -25,6 +25,10 @@
 	.item-img {
 		width: 290px;
 		height: 318px;
+		overflow: hidden;
+		img {
+			transition: all 300ms ease-in-out;
+		}
 	}
 	.item-text {
 		h3 {
@@ -60,6 +64,9 @@
 			font-size: 15px;
 			font-weight: 700;
 			align-items: center;
+			&:hover {
+				letter-spacing: 1px;
+			}
 			i {
 				width: 16px;
 				height: 16px;
@@ -78,6 +85,13 @@
 				&:before {
 					transform: rotate(-45deg);
 				}
+			}
+		}
+	}
+	&:hover {
+		.item-img {
+			img {
+				transform: scale(1.1);
 			}
 		}
 	}

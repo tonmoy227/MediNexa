@@ -141,6 +141,7 @@
 		line-height: 1;
 		font-size: 188px;
 		font-weight: 600;
+		white-space: nowrap;
 		letter-spacing: -4px;
 		color: var(--mx-prime-c3);
 		@media #{$lg} {

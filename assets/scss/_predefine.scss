@@ -415,6 +415,9 @@ a {
 			justify-content: center;
 			color: var(--mx-title-color);
 		}
+		&:hover {
+			background-color: var(--mx-prime-c2);
+		}
 	}
 }
 
