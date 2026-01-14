@@ -593,6 +593,23 @@
 		}
 	}
 	&:is(.header_style_four) {
+		&:before,
+		&:after {
+			top: 0;
+			height: 6px;
+			content: '';
+			position: absolute;
+		}
+		&:before {
+			left: 0;
+			width: 65%;
+			background-color: var(--mx-prime-c2);
+		}
+		&:after {
+			right: 0;
+			width: 35%;
+			background-color: var(--mx-prime-c3);
+		}
 		.mx-header-content {
 			padding: 30px 60px;
 			@media #{$xxl} {

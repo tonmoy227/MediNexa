@@ -241,6 +241,9 @@
 			font-weight: 600;
 			text-align: center;
 			background-color: #005350;
+			&:hover {
+				letter-spacing: 2px;
+			}
 		}
 	}
 }

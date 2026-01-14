@@ -739,6 +739,22 @@ Font load
 .mx-header-section:is(.header_style_three) .offcanvas-trigger button:hover {
   background-color: var(--mx-prime-c);
 }
+.mx-header-section:is(.header_style_four):before, .mx-header-section:is(.header_style_four):after {
+  top: 0;
+  height: 6px;
+  content: "";
+  position: absolute;
+}
+.mx-header-section:is(.header_style_four):before {
+  left: 0;
+  width: 65%;
+  background-color: var(--mx-prime-c2);
+}
+.mx-header-section:is(.header_style_four):after {
+  right: 0;
+  width: 35%;
+  background-color: var(--mx-prime-c3);
+}
 .mx-header-section:is(.header_style_four) .mx-header-content {
   padding: 30px 60px;
 }
@@ -10563,6 +10579,9 @@ a:hover, a:focus {
   font-weight: 600;
   text-align: center;
   background-color: #005350;
+}
+.mx-cta5-content .item-cta-info-wrap .app_btn:hover {
+  letter-spacing: 2px;
 }
 
 /*---------------------------------------------------- */
